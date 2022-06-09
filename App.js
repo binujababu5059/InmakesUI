@@ -6,6 +6,9 @@ import Otp from './screens/otp'
 import Register from './screens/register';
 import Selectschool from './screens/selectschool';
 import Slider from './screens/slider';
+import Home from './screens/home';
+
+
 
 
 const Stack = createNativeStackNavigator();
@@ -19,6 +22,7 @@ const App = () =>{
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Selectschool" component={Selectschool} />
         <Stack.Screen name="Slider" component={Slider} />
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,6 +1,5 @@
 import React from "react";
-import { StyleSheet, Image, Dimensions, Text, View,Button,TouchableHighlight } from "react-native";
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import { StyleSheet, Image,  Text, View } from "react-native";
 import Swiper from "react-native-swiper";
 
 
@@ -45,9 +44,15 @@ const styles = StyleSheet.create({
     lineHeight: 25,
     marginLeft: 10,
   },
+  slide1: {
+    flex: 1,
+    paddingTop: 40,
+    marginHorizontal: 25,
+    
+  },
 });
 
-export default function Slider() {
+export default function Slider({navigation}) {
  
     return (
       <Swiper
@@ -100,20 +105,20 @@ export default function Slider() {
           </Text>
         </View>
 
-        <View style={styles.slide}>
+        <View style={styles.slide1}>
           <Image source={require('../assets/home3.jpg')} style={styles.img} />
           <Text style={styles.title}>Kids and teens</Text>
           <Text style={styles.text}>
             Kids and teens can track their stocks 24/7 and place trades that you approve.
           </Text>
-           <View style={{width:60,height:30,backgroundColor:'pink'}}>
-             {/* <Button title='Done' ></Button>  */}
-             <Text style={{}}>Done</Text>
-          </View>  
-          
-        </View>
-        
-      </Swiper>
+          <View style={{alignItems:'flex-end',justifyContent:'flex-end'}}>
+           <View style={{width:60,height:30,backgroundColor:'blue',alignItems:'center',justifyContent:'center'}}>
+             <Text  onPress={() => navigation.navigate('Home')}>Done</Text>
+         </View>
+         </View>  
+          </View>
+            
+        </Swiper>
   );
 };
 
