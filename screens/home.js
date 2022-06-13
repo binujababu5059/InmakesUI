@@ -149,9 +149,9 @@ const DATA = [
   );
 
 
-export default function Home(){
+export default function Home({navigation}){
     return(
-      // function Mytab(){
+      
       <SafeAreaView style= {styles.keyboard}>
         <View style= {styles.maincontainer}>
           <View style={styles.topBar}>
@@ -241,17 +241,14 @@ export default function Home(){
   </ScrollView>
  </View>
        
-        {/* <View style={{height:50,width:'100%',position:'absolute',bottom: 15 }}>
-      
-      
-
-        <Tab.Navigator screenOptions={{
-          tabBarColor: 'white'
-          }}>
-              <Tab.Screen name="Login" component={Login}  options={{
+         <View style={{height:50,width:'100%',position:'absolute',bottom: 15 }}>
+          <Tab.Navigator screenOptions={{
+           tabBarColor: 'white'
+           }}>
+              <Tab.Screen name="Home" component={Login}  options={{
               tabBarLabel: 'Home',
               tabBarIcon: ({ color }) => (
-              <Icon name="home" color= 'grey' size={26}  onPress={() => navigation.navigate('Home')}/>
+              <Icon name="home" color= 'grey' size={26}  onPress={() => navigation.navigate('Login')}/>
               ),
               tabStyle:{
               marginTop:(Platform.OS === 'ios') ? 0 : 0,
@@ -284,11 +281,10 @@ export default function Home(){
           ),
         }}/>
     </Tab.Navigator>
-
-    </View> */}
+   </View> 
     
-      </SafeAreaView>   
-      // }   
+  </SafeAreaView>   
+        
     );
   }
 
